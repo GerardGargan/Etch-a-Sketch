@@ -27,7 +27,11 @@ sizeButton.addEventListener("click", (e)=>{
 
     if(number>=100){
         alert("Error! Must be less than 100");
-    } else {
+    } else if(number<1){
+        alert("Error number must be >0");
+    } 
+    
+    else {
         gridContainer.innerHTML = '';
         generateGrid(number);
     }
