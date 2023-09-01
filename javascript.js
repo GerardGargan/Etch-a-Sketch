@@ -24,8 +24,15 @@ function generateGrid(size){
 sizeButton.addEventListener("click", (e)=>{
     const size = prompt("Please enter a grid size");
     const number = parseInt(size);
-    gridContainer.innerHTML = '';
-    generateGrid(number);
+
+    if(number>=100){
+        alert("Error! Must be less than 100");
+    } else {
+        gridContainer.innerHTML = '';
+        generateGrid(number);
+    }
+
+    
 });
 
 generateGrid(16);
