@@ -34,8 +34,10 @@ function generateGrid(size){
 colorButton.addEventListener("click", (e)=>{
     if(selectedColor=="black"){
         selectedColor="Random";
+        colorButton.textContent = "Black";
     } else {
         selectedColor="black";
+        colorButton.textContent = "Random colours";
     }
 })
 
