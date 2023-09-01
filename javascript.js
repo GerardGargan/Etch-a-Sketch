@@ -1,6 +1,7 @@
 const gridContainer = document.querySelector(".grid-container");
 const sizeButton = document.querySelector(".sizeButton");
 const resetButton = document.querySelector(".resetGrid");
+const colorButton = document.querySelector(".colorSwitch");
 let selectedSize = 16;
 let selectedColor = "black";
 
@@ -18,13 +19,32 @@ function generateGrid(size){
         square.style.height = squareSize+"px";
 
        square.addEventListener("mouseover", (e)=>{
-        square.style.backgroundColor = selectedColor;
+        if(selectedColor=="black"){
+            square.style.backgroundColor = selectedColor;
+        }
+         else {
+            square.style.backgroundColor = randColor();
+         }
        });
         
         gridContainer.appendChild(square);
     }
 }
 
+colorButton.addEventListener("click", (e)=>{
+    if(selectedColor=="black"){
+        selectedColor="Random";
+    } else {
+        selectedColor="black";
+    }
+})
+
+function randColor() {
+    let red = Math.floor(Math.random() * 256);
+    let green = Math.floor(Math.random() * 256);
+    let blue = Math.floor(Math.random() * 256);
+    return `rgb(${red},${green},${blue})`;
+}
 
 
 

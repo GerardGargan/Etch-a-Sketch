@@ -17,4 +17,23 @@ h1 {
     height: 550px;
     width: 550px;
     cursor: crosshair;
+    background-color: white;
+}
+
+.grid-outline {
+    background-color: rgb(10, 50, 197);
+    padding: 50px;
+    border-radius: 5px;
+}
+
+body {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+button {
+    width: 200px;
+    height: 50px;
+    margin: 10px;
 }
