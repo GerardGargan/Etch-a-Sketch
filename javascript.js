@@ -1,5 +1,7 @@
 const gridContainer = document.querySelector(".grid-container");
 const sizeButton = document.querySelector(".sizeButton");
+const resetButton = document.querySelector(".resetGrid");
+let selectedSize = 16;
 
 
 function generateGrid(size){
@@ -33,10 +35,16 @@ sizeButton.addEventListener("click", (e)=>{
     
     else {
         gridContainer.innerHTML = '';
+        selectedSize = number;
         generateGrid(number);
     }
 
     
 });
 
-generateGrid(16);
+resetButton.addEventListener("click", (e)=>{
+    gridContainer.innerHTML = "";
+    generateGrid(selectedSize);
+});
+
+generateGrid(selectedSize);
