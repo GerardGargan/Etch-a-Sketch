@@ -4,8 +4,13 @@
 }
 
 h1 {
-    color: red;
-    
+    color: #FFED66;
+    font-family: 'Satisfy', cursive;
+    font-size: 60px;
+}
+
+header {
+    margin-bottom: 10px;
 }
 
 .square {
@@ -21,17 +26,29 @@ h1 {
     background-color: white;
 }
 
+.buttons {
+    margin-top: 20px;
+}
+
 .grid-outline {
-    background-color: rgb(10, 50, 197);
-    padding: 75px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FF5E5B;
+    padding: 25px 50px 25px 50px;
     border-radius: 10px;
+    border: 1px solid black;
+    
 }
 
 body {
+    margin-top: 80px;
    display: flex;
    flex-direction: column;
-   align-items: center;
-   background-color: bisque;
+   justify-items: center;
+   background-color: #78CCCB;
+   
 }
 
 button {
